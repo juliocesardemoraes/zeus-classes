@@ -1,28 +1,18 @@
-// Acessar caracteres de uma string. O primeiro e o último
-let string = "JavascriptB011";
-console.log(string[0]);
-console.log(string[string.length - 1]);
+// 1. Gere um número aleatório entre 0 e 1
 
-// Contar o número de ocorrências de um caractere, exemplo "a"
-let counterA = 0;
+// 2. Gere um número aleatório entre 0 e 10
 
-for (let i = 0; i < string.length; i++) {
-  if (string[i] === "a") counterA++;
-}
+// 3. Arredonde um número aleatório para o inteiro mais próximo
 
-console.log(counterA);
+// 4. Gere um número inteiro entre 1 e 10
 
-// Contar o número de ocorrências de um caractere, exemplo "B"
-let counterB = 0;
+// 5. Simule um dado de 6 lados (de 1 a 6)
 
-for (let i = 0; i < string.length; i++) {
-  if (string[i] === "B") counterB++;
-}
+// 6. Sorteie um item de uma lista de frutas
 
-console.log(counterB);
+// Já deixei o array pronto para caso queiram utilizá-lô.
+const frutas = ["pera", "maca", "banana", "abacaxi", "uva", "laranja", "limao"];
 
-// Ver se existem números no texto
+// 7. Simule cara ou coroa. cara -> 1 coroa -> 0
 
-for (let i = 0; i < string.length; i++) {
-  console.log(isNaN(Number(string[i])) ? "Não é um número" : "É um número");
-}
+// 8. Gere um número inteiro entre 5 e 10
