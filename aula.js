@@ -25,9 +25,7 @@ const num4 = Math.floor(Math.random() * 10) + 1;
 console.log("N4", num4);
 
 // Math random com minimo maior do que 1 -> 5 -> 10
-// 0 -> 10 + 5 -> 15
 const min = 5;
 const max = 10;
-//                                       10  -  6
 const num5 = Math.floor(Math.random() * (max - min + 1)) + min;
 console.log("N5", num5);
