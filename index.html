@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validação de Comentário</title>
+  </head>
+  <body>
+    <form onsubmit="createUser(event)">
+      <input
+        type="text"
+        name="password"
+        id="password"
+        oninput="validateRealTime()"
+        placeholder="Digite sua senha"
+      />
+      <button type="submit">Criar Usuário</button>
+    </form>
+    <p id="errorMessage"></p>
+
+    <script>
+      // se a senha for menor do que 6 caracteres eu não vou criar um user
+      // e eu vou dar uma msg de erro
+      // se a senha for maior do que 20 caracteres eu não vou criar um user
+
+      const password = document.getElementById("password");
+      const errorMessage = document.getElementById("errorMessage");
+
+      function createUser(event) {
+        event.preventDefault();
+        console.log(password.value);
+
+        if (password.value.length < 6) {
+          errorMessage.textContent = "Erro: Senha muito curta!";
+        }
+      }
+
+      function validateRealTime() {
+        console.log(password.value);
+
+        if (password.value.length < 6) {
+          errorMessage.textContent = "Erro: Senha muito curta!";
+        } else if (password.value.length > 20) {
+          errorMessage.textContent = "Erro: Senha muito grande!";
+        } else {
+          errorMessage.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>

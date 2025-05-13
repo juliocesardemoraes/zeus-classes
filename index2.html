@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validação de Comentário</title>
+  </head>
+  <body>
+    <form onsubmit="createUser(event)">
+      <textarea
+        name="comments"
+        id="comments"
+        oninput="validateComment()"
+      ></textarea>
+      <button type="submit">Validar comentários</button>
+    </form>
+    <p id="errorMessage"></p>
+
+    <script>
+      const comments = document.getElementById("comments");
+      const errorMessage = document.getElementById("errorMessage");
+
+      const badWords = ["idiota", "burro", "tonto"];
+
+      function validateComment() {
+        console.log(comments.value);
+        errorMessage.textContent = "";
+
+        for (let i = 0; i < badWords.length; i++) {
+          if (comments.value.includes(badWords[i])) {
+            errorMessage.textContent =
+              "Seu comentário contém linguagem inapropriada.";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
